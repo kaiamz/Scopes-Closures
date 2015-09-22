@@ -1,12 +1,12 @@
 $(document).ready(function() {
-  var rowNum = 0;
+  var functionRowNumber = 0;
   //Table
 
   $("#add_row").click(function(){
-    rowNum++;
 
-    function addRowFunction () {
       var counter = 0;
+      var rowNum = functionRowNumber;
+
       $("#buttonTable").append("<p></p>" +
       "<p id='tableCounter" + rowNum + "'>0</p>" +
       "<button id='inc_btn" + rowNum + "' type='button' class='btn btn-danger'>Add</button>" +
@@ -49,8 +49,8 @@ $(document).ready(function() {
         counter = 0;
         $("#tableCounter" + rowNum).html(counter);
       });
-    };
 
+      functionRowNumber++;
 
 
   });
